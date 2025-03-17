@@ -34,14 +34,15 @@ document.addEventListener("DOMContentLoaded", function() {
             messages.push("password is too short and insecured");
         }
 
-        if(!isValid) {
-            feedbackDiv.textContent = messages.join(" ");
-            feedbackDiv.style.color = "red";
-            console.log(messages);
+        feedbackDiv.style.display = "block";
+
+        if(isValid) {
+            feedbackDiv.textContent = "Registration successful!";
+            feedbackDiv.style.color = "#28a745";
+
         } else {
-            feedbackDiv.textContent = "Form Submitted Successfully";
-            feedbackDiv.style.color = "green";
-            console.log("sucess");
+            feedbackDiv.textContent = messages.join("<br>");
+            feedbackDiv.style.color = "#dc3545";
         }
 
         
